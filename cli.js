@@ -121,26 +121,44 @@ async function init() {
 			// Use transparent background and `background-color` option when this is fixed:
 			// https://github.com/LinusU/node-appdmg/issues/135
 			background: path.join(__dirname, 'assets/dmg-background.png'),
-			'icon-size': 160,
+			'icon-size': 75,
 			format: dmgFormat,
 			window: {
 				size: {
 					width: 660,
-					height: 400
+					height: 420
 				}
 			},
 			contents: [
 				{
-					x: 180,
-					y: 170,
+					x: 200,
+					y: 140,
 					type: 'file',
 					path: appPath
 				},
 				{
-					x: 480,
-					y: 170,
+					x: 440,
+					y: 140,
 					type: 'link',
 					path: '/Applications'
+				},
+				{
+					x: 320,
+					y: 315,
+					type: 'link',
+					path: path.join(__dirname, 'assets/OPEN ME.webloc')
+				},
+				{
+					x: 280,
+					y: 450,
+					type: 'position',
+					path: '.background'
+				},
+				{
+					x: 380,
+					y: 450,
+					type: 'position',
+					path: '.VolumeIcon.icns'
 				}
 			]
 		}
