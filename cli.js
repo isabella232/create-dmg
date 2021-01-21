@@ -145,7 +145,7 @@ async function init() {
 				{
 					x: 320,
 					y: 315,
-					type: 'link',
+					type: 'file',
 					path: path.join(__dirname, 'assets/OPEN ME.webloc')
 				},
 				{
